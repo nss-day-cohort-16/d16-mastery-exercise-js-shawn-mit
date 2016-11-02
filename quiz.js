@@ -1,50 +1,55 @@
 //get tree setup with key value pairs dynamically determined by user input 
 
-var theTree = {};
+var tall = document.getElementById ("tall");
+var char = document.getElementById("char");
+var output = 
 
-//var x = document.getElementById("myText").value;
+var theTree = {
+	height:tall.value, 
+	character:char.value,
+	getInput: function () {
 
- function getInput () {
+	if ( theTree.height <= 0 || theTree.character <= "" ){
+		alert ("Must enter a number and a character!");
+	}
 
-	theTree.height = document.getElementById ("tall").value;
-	theTree.character = document.getElementById("char").value;
+	else {
+		
+		growTree(theTree.getInput())
+		 
+		 }
+
+	}
 	
-	};
+}
 
-	if ( theTree.height === "")
-		alert ("Must enter a number!");
-		
-	} 
-	else { 
-		
-		growTree()
-	}; 	
-
-	// create if else for conditions of user interaction
 
 function growTree () {
 
-		var treeBranch = "";
+		var tree = "";    
+		var stringSpacing = " ";
 
-		for (i = 0; i < theTree.height.length; i++){
-			treeBranch +=  insertSpaces.height;
+	for (i = 0; i < theTree.height.length; i ++){
 
-			}
-		}	 
+		if ((i * 2 ) +1 ) {
 
+			tree += " ";
+		}
 
-
-	  /*space = ""  
-	  loop through giving the array spaces 
-
-	  .repeat()  // use for tree . */
-
+	} 
+		
+}
 
 
-//  click event for tree button
-//treebutton.addEventListener("click",  ); 
 
-//	document.getElementById("treebutton").addEventListener("click", y ) 
-	document.getElementById("output").innerHTML = ""
+	
+treebutton.addEventListener("click", theTree.getInput);
+
+
+
+
+	 
+
+
 
 
