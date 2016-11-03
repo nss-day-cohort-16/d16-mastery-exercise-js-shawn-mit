@@ -2,48 +2,51 @@
 
 var tall = document.getElementById ("tall");
 var char = document.getElementById("char");
-var output = 
+//var output = document.getElementById ("output");
 
 var theTree = {
-	height:tall.value, 
-	character:char.value,
-	getInput: function () {
+	height:tall.value,
+	character:char.value
+};
 
-	if ( theTree.height <= 0 || theTree.character <= "" ){
+	function getInput () {
+
+
+	if ( theTree.height <= 0 || theTree.character === "" ) {
 		alert ("Must enter a number and a character!");
 	}
 
 	else {
 		
-		growTree(theTree.getInput())
+		growTree(theTree)
 		 
 		 }
 
 	}
 	
-}
+	function growTree (objTree) {
 
+		var height = objTree.value;
+		var character = objTree.value; 
+		var numSpaces= " ";
 
-function growTree () {
-
-		var tree = "";    
-		var stringSpacing = " ";
-
-	for (i = 0; i < theTree.height.length; i ++){
+	for (i = 0; i < height; i ++){
 
 		if ((i * 2 ) +1 ) {
 
-			tree += " ";
-		}
+		console.log ("test", objTree); 
 
+
+		//object[property_name] = set;
+		}
 	} 
-		
+
+	//return growTree.addEventListner("click", ????);			
 }
 
+//'Grow your Tree button */
 
-
-	
-treebutton.addEventListener("click", theTree.getInput);
+treebutton.addEventListener("click", getInput);
 
 
 
