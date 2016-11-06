@@ -63,3 +63,85 @@ Here's what the pine tree should look like when you specify a height of 7, and u
  ***********
 *************
 ```
+
+
+
+Previous JS with an IIFE statment ; 
+
+
+
+treebutton.addEventListener("click", getInput (event) {
+		if (event.which === 13 ) { 
+		   event.preventDefault();
+		} 
+	});
+
+
+
+var theTree 
+
+	
+		//object with characteristics 
+	var theTree = {
+			height : tall.value,
+			character : char.value,
+			};
+
+//end of private variables (globally scoped to function)
+
+		oldTree.getInput = function (treeheight) {
+
+			var treeheight;
+
+			if (theTree.height < 0 ){
+				alert("Please enter number");
+			} 
+
+			else if (theTree.character === "") {
+				alert("Add any character"); 
+			}
+
+			else {
+
+				for (i = 0; i < theTree.height; i++){
+					treeheight +=  ;
+				}
+
+				for ()
+			}
+		};
+
+	return oldTree;
+
+	//console.log ("check", newTree);
+
+}( theTree || {});
+
+
+
+
+	
+	//need an event listener for the user when they strik the enter key.
+	/*function growTree (objTree) {
+
+		var height = theTree.value;
+		var character = theTree.value; 
+		var numSpaces= " ";
+
+	for (i = 0; i < height; i ++){
+
+	((i * 2 ) +1 ) }
+
+		//console.log ("test", tree); 
+	}
+
+
+
+
+
+
+	 
+
+
+
+

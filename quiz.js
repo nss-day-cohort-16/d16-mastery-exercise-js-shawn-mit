@@ -1,58 +1,64 @@
-//get tree setup with key value pairs dynamically determined by user input 
+
+treebutton.addEventListener("click", output);
+
+
+function getInput (spaces, newTree) {
 
 var tall = document.getElementById ("tall");
 var char = document.getElementById("char");
-//var output = document.getElementById ("output");
+var output = document.getElementById("output");
 
-var theTree = {
-	height:tall.value,
-	character:char.value
-};
+var tree = {
+		height:tall.value,
+		character:char.value
+	};
+ 
+var newTree = {}; 
+var spaces = " ";
 
-	function getInput () {
+	if (tree.height < 1 ) {
 
+		alert("Enter a number"); 
 
-	if ( theTree.height <= 0 || theTree.character === "" ) {
-		alert ("Must enter a number and a character!");
+	} 
+
+	else if (tree.character === "") {
+
+		alert("Enter a character");
+
 	}
 
 	else {
-		
-		growTree(theTree)
-		 
-		 }
 
-	}
-	
-	function growTree (objTree) {
+		for (i = 0; i < tree.height; i++ ){
 
-		var height = objTree.value;
-		var character = objTree.value; 
-		var numSpaces= " ";
-
-	for (i = 0; i < height; i ++){
-
-		if ((i * 2 ) +1 ) {
-
-		console.log ("test", objTree); 
-
-
-		//object[property_name] = set;
+			newTree.height += newTree; 
 		}
-	} 
 
-	//return growTree.addEventListner("click", ????);			
+		for (c = 0; c < tree.character; c++){
+
+			newTree.character += newTree;
+		}
+
+		for (s < 0; s < tree.height ; s++){
+
+			spaces.value 		
+		}	
+
+		return newTree;
+		
+	}
+
+ 	//console.log('newTree', newTree);
 }
 
-//'Grow your Tree button */
 
-treebutton.addEventListener("click", getInput);
+/*	function output (getInput) {
 
-
-
-
-	 
+output = document.getElementById().innerHTML = "<div>"  + spaces + newTree +  "</div>" 
 
 
+}
 
 
+*/
