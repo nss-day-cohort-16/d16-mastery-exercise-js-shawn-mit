@@ -1,20 +1,23 @@
 
-treebutton.addEventListener("click", output);
+treebutton.addEventListener("click", getInput (event));
 
 
-function getInput (spaces, newTree) {
+
+
+
+function getInput () {
 
 var tall = document.getElementById ("tall");
 var char = document.getElementById("char");
-var output = document.getElementById("output");
+//var output = document.getElementById("output");
 
 var tree = {
 		height:tall.value,
 		character:char.value
 	};
  
-var newTree = {}; 
-var spaces = " ";
+//var newTree = {}; 
+//var spaces = " ";
 
 	if (tree.height < 1 ) {
 
@@ -30,35 +33,26 @@ var spaces = " ";
 
 	else {
 
-		for (i = 0; i < tree.height; i++ ){
-
-			newTree.height += newTree; 
-		}
-
-		for (c = 0; c < tree.character; c++){
-
-			newTree.character += newTree;
-		}
-
-		for (s < 0; s < tree.height ; s++){
-
-			spaces.value 		
-		}	
-
-		return newTree;
-		
+		growTree(tree)
 	}
 
- 	//console.log('newTree', newTree);
-}
+};
 
+	function growTree (tree) { 
 
-/*	function output (getInput) {
+		
+		for (i = 0; i < tree.height; i++ ) {
 
-output = document.getElementById().innerHTML = "<div>"  + spaces + newTree +  "</div>" 
+			var buffers = " ";
+			var characters = (i * 2) +1;
+			var treeVertical = (tree.height - 1 ) - i;
+			
+		//console.log("newTree", growTree);
+		 console.log ( /*"test",*/ buffers.repeat(treeVertical) + tree.character.repeat(characters));
+		}
+	};
 
-
-}
-
-
-*/
+	
+	
+	//document.getElementById("output").innerHTML = buffers + characters + treeVertical; 
+	
